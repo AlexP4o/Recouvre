@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recouvre – Relance tes factures impayées jusqu'à la mise en demeure</title>
+<meta name="description" content="Recouvre écrit les relances à 7, 15 et 30 jours puis la mise en demeure. Tu n'as plus à oser. 49 €/mois, sans engagement, remboursé sous 14 jours.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Ta facture est impayée. Relance-la sans écrire le mail gênant.">
+<meta property="og:description" content="Relances à 7, 15 et 30 jours, puis mise en demeure prête à envoyer. 49 €/mois, sans engagement.">
+<!-- À AJOUTER : <meta property="og:image" content="https://TON-DOMAINE/apercu.png"> (image 1200x630) -->
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23101820'/%3E%3Cpath d='M9 17l5 5 9-12' stroke='%2312a05e' stroke-width='4' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;800&display=swap" rel="stylesheet">
+<style>
+:root{--encre:#101820;--papier:#f2f3f1;--blanc:#fff;--gris:#5b6670;--filet:#d9dcd8;--rouge:#d1241b;--vert:#0b7a4b;--vert-fonce:#08623c}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:400 17px/1.55 Archivo,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--encre);background:var(--papier);padding-bottom:84px;-webkit-text-size-adjust:100%}
+.w{max-width:680px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-weight:800;letter-spacing:-.02em;line-height:1.08}
+h1{font-size:clamp(34px,9.5vw,56px)}
+h2{font-size:clamp(26px,7vw,36px);margin-bottom:14px}
+p+p{margin-top:12px}
+header{padding:18px 0}
+.logo{font-weight:800;font-size:20px;letter-spacing:-.03em}
+.logo i{font-style:normal;color:var(--vert)}
+.hero{padding:18px 0 40px}
+.hero p.sub{font-size:19px;margin:18px 0 24px;color:#2b3640}
+.btn{display:block;width:100%;text-align:center;background:var(--vert);color:#fff;text-decoration:none;font-weight:800;font-size:18px;padding:18px 20px;border-radius:10px;min-height:56px}
+.btn:hover,.btn:focus-visible{background:var(--vert-fonce)}
+.btn:focus-visible{outline:3px solid var(--encre);outline-offset:3px}
+.rassure{font-size:14px;color:var(--gris);margin-top:10px;text-align:center}
+.facture{background:var(--blanc);border:1px solid var(--filet);border-radius:6px;padding:20px;margin-top:34px;position:relative;overflow:hidden}
+.facture .l{display:flex;justify-content:space-between;gap:12px;font-size:15px;color:var(--gris);padding:6px 0;border-bottom:1px dashed var(--filet)}
+.facture .l b{color:var(--encre);font-variant-numeric:tabular-nums}
+.facture .tot{font-size:38px;font-weight:800;margin-top:12px;font-variant-numeric:tabular-nums}
+.tampon{position:absolute;right:14px;top:58px;transform:rotate(-9deg);border:4px solid var(--rouge);color:var(--rouge);font-weight:800;font-size:26px;padding:2px 12px;border-radius:4px;letter-spacing:.02em;background:rgba(255,255,255,.7)}
+.frise{display:flex;gap:6px;margin-top:16px;flex-wrap:wrap}
+.frise span{font-size:14px;font-weight:500;border:1.5px solid var(--encre);border-radius:999px;padding:4px 12px}
+.frise span:last-child{background:var(--rouge);border-color:var(--rouge);color:#fff}
+section{padding:40px 0;border-top:1px solid var(--filet)}
+.douleur{background:var(--encre);color:#fff;border:0}
+.douleur .gros{font-size:clamp(30px,8.5vw,48px);font-weight:800;line-height:1.05;letter-spacing:-.025em}
+.douleur .gros em{font-style:normal;color:#ff7a70}
+.douleur p{color:#c9d1d8;margin-top:16px}
+.benef{list-style:none;padding:0;display:grid;gap:22px;margin-top:8px}
+.benef h3{font-size:21px;margin-bottom:4px}
+.benef p{color:#2b3640}
+.offre{background:var(--blanc);border:2px solid var(--encre);border-radius:12px;padding:24px 20px}
+.offre h2{margin-bottom:6px}
+.inclus{list-style:none;padding:0;margin:16px 0}
+.inclus li{padding:9px 0 9px 30px;position:relative;border-bottom:1px solid var(--filet)}
+.inclus li::before{content:"";position:absolute;left:4px;top:15px;width:14px;height:8px;border-left:3px solid var(--vert);border-bottom:3px solid var(--vert);transform:rotate(-45deg)}
+.calc{background:#e7f3ec;border-left:5px solid var(--vert);padding:14px 16px;margin:18px 0;border-radius:4px}
+.prix{font-size:46px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.prix small{font-size:18px;font-weight:500;letter-spacing:0}
+.jour{color:var(--gris);margin:6px 0 16px}
+.garantie{border:2px dashed var(--vert);border-radius:8px;padding:14px 16px;margin:16px 0}
+.garantie b{display:block;font-size:18px;margin-bottom:4px}
+details{border-bottom:1px solid var(--filet);padding:14px 0}
+summary{font-weight:800;font-size:18px;cursor:pointer;list-style:none;padding-right:28px;position:relative;min-height:28px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;top:-2px;font-size:26px;font-weight:500}
+details[open] summary::after{content:"–"}
+details p{margin-top:10px;color:#2b3640}
+footer{padding:32px 0 40px;font-size:14px;color:var(--gris);border-top:1px solid var(--filet)}
+footer a{color:var(--gris);margin-right:14px;display:inline-block;padding:6px 0}
+.barre{position:fixed;left:0;right:0;bottom:0;background:var(--papier);border-top:1px solid var(--filet);padding:10px 16px calc(10px + env(safe-area-inset-bottom));z-index:5}
+.barre .btn{max-width:680px;margin:0 auto;padding:14px 20px;min-height:52px}
+@media (min-width:760px){.barre{display:none}body{padding-bottom:0}.btn{width:auto;display:inline-block;padding:18px 36px}.rassure{text-align:left}.offre .btn{display:block;width:100%}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header><div class="w"><span class="logo">Recouvre<i>.</i></span></div></header>
+
+<main>
+<div class="w hero">
+  <h1>Ta facture est impayée. Relance-la sans écrire le mail gênant.</h1>
+  <p class="sub">Recouvre rédige tes relances à 7, 15 et 30 jours, puis la lettre de mise en demeure. Tu n'as plus à oser : tout est prêt, au bon ton.</p>
+  <a class="btn" href="https://buy.stripe.com/28E9AU4xQ4yM35B7Dh7Vm01">Commencer – 49 €/mois</a>
+  <p class="rassure">Sans engagement, résiliable à tout moment. Remboursé sous 14 jours.</p>
+
+  <div class="facture" aria-hidden="true">
+    <div class="l"><span>Facture n° 2026-014</span><b>Échue il y a 92 jours</b></div>
+    <div class="l"><span>Client</span><b>Société Durand</b></div>
+    <div class="tot">1 500,00 €</div>
+    <div class="tampon">IMPAYÉ</div>
+    <div class="frise"><span>Relance J+7</span><span>J+15</span><span>J+30</span><span>Mise en demeure</span></div>
+  </div>
+</div>
+
+<section class="douleur"><div class="w">
+  <p class="gros">1 500 € facturés. <em>3 mois</em> de silence.</p>
+  <p>Tu as fait le travail, le client en profite, et c'est toi qui avances l'argent. Plus tu attends, plus la facture devient difficile à réclamer. L'argent est dû : il n'a simplement jamais été demandé.</p>
+</div></section>
+
+<section><div class="w">
+  <h2>Demander son dû devient une routine, plus un malaise.</h2>
+  <ul class="benef">
+    <li><h3>Tu n'écris plus rien de zéro</h3><p>Trois relances prêtes, du rappel poli à la dernière échéance, avec les bons mots et les bonnes mentions.</p></li>
+    <li><h3>La mise en demeure est déjà rédigée</h3><p>Quand le client ne répond toujours pas, tu envoies la lettre. Pas besoin de chercher quoi dire ni comment le dire.</p></li>
+    <li><h3>Tu sais ce qu'il reste à encaisser</h3><p>Dû, relancé, encaissé, en euros. Tu vois d'un coup d'œil où en est ton argent.</p></li>
+  </ul>
+</div></section>
+
+<section id="offre"><div class="w">
+  <div class="offre">
+    <h2>Voilà ton kit, prêt.</h2>
+    <p>Tu le reçois par email dès le paiement. Tu n'as rien à installer.</p>
+    <ul class="inclus">
+      <li>Les 3 relances écrites : à 7, 15 et 30 jours</li>
+      <li>La lettre de mise en demeure, prête à envoyer</li>
+      <li>L'accès à l'outil d'envoi automatique dès son ouverture, au même prix</li>
+    </ul>
+    <p class="calc"><b>Une seule facture de 1 500 € récupérée</b> paie plus de 30 mois d'abonnement.</p>
+    <div class="prix">49 €<small> par mois</small></div>
+    <p class="jour">Soit environ 1,60 € par jour. Factures illimitées.</p>
+    <div class="garantie"><b>Satisfait ou remboursé, 14 jours</b>Si ça ne te convient pas, écris à johanmasialamuntshwa@gmail.com : tu es remboursé intégralement sous 5 jours ouvrés, sans avoir à te justifier.</div>
+    <a class="btn" href="https://buy.stripe.com/28E9AU4xQ4yM35B7Dh7Vm01">Commencer – 49 €/mois</a>
+    <p class="rassure">Sans engagement, résiliable à tout moment. Paiement sécurisé par Stripe.</p>
+  </div>
+</div></section>
+
+<section><div class="w">
+  <h2>Questions fréquentes</h2>
+  <details><summary>Est-ce que ça marche pour mon cas ?</summary><p>Oui si tu factures des professionnels en France : indépendants, petites structures, prestations, missions. Les modèles s'adaptent à ton activité en changeant quelques mots. Si ton client est un particulier, certaines mentions diffèrent : écris-nous avant de payer.</p></details>
+  <details><summary>Combien de temps ça me prend ?</summary><p>Environ 5 minutes par facture : tu copies le modèle, tu complètes le montant et l'échéance, tu envoies. L'outil automatique supprimera aussi cette étape.</p></details>
+  <details><summary>Que se passe-t-il si je veux arrêter ?</summary><p>Tu écris à johanmasialamuntshwa@gmail.com, ton abonnement s'arrête le jour même, sans frais ni justification. Et pendant 14 jours, tu peux aussi te faire rembourser.</p></details>
+  <details><summary>À quoi sert exactement ce que je paie ?</summary><p>Aux modèles de relance et à la mise en demeure que tu reçois tout de suite, puis à l'outil automatique et à ses mises à jour, inclus dans le même abonnement.</p></details>
+</div></section>
+</main>
+
+<footer><div class="w">
+  <a href="/mentions-legales">Mentions légales</a><a href="/cgv">Conditions générales de vente</a><a href="/confidentialite">Politique de confidentialité</a>
+  <p style="margin-top:10px">Recouvre – [RAISON SOCIALE À COMPLÉTER] – SIRET [À COMPLÉTER]</p>
+</div></footer>
+
+<div class="barre"><a class="btn" href="https://buy.stripe.com/28E9AU4xQ4yM35B7Dh7Vm01">Commencer – 49 €/mois</a></div>
+
+<!-- Mesure d'audience : coller ici le script Plausible ou Umami (étape suivante) -->
+</body>
+</html>
